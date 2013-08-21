@@ -37,15 +37,15 @@ take effect
 The following steps will install and configure the needed tools and apps for
 development.
 
-* Install Command line tools for XCode:
+Install Command line tools for XCode:
 
     $ xcode-select --install
 
-* Install homebrew:
+Install homebrew:
 
     $ utils/homebrew
 
-* Install and configure several apps/utilities:
+Install and configure several apps/utilities:
 
     $ zsh/configure
     $ git/configure
@@ -58,12 +58,12 @@ development.
     $ utils/ruby
     $ utils/python
 
-* Install manually the following Sublime Packages:
+Install manually the following Sublime Packages:
 
-  * EditorConfig
-  * LESS
-  * sass
-  * SublimeLinter (TODO: Not yet available for ST3)
+* EditorConfig
+* LESS
+* sass
+* SublimeLinter (TODO: Not yet available for ST3)
 
 ## Mission control
 
@@ -90,14 +90,14 @@ Next, install the needed non-free apps (avoid Office as long as you can):
 
 ### Photoshop configuration
 
-* When the Photoshop installer finishes execute:
+When the Photoshop installer finishes execute:
 
     $ photohop/configure
 
-* Reduce the Cache Levels. Go to Photoshop → Preferences → Performance. Enter a value of 1 in the Cache Levels text box.
+Reduce the Cache Levels. Go to `Photoshop → Preferences → Performance`. Enter a value of `1` in the Cache Levels text box.
 
-* Reduce Amount of History States. Go to Photoshop → Preferences → Performance. Enter 10 in the History States text box.
+Reduce Amount of History States. Go to `Photoshop → Preferences → Performance`. Enter `10` in the History States text box.
 
-* Disable Export Clipboard. Go to Photoshop → Preferences → General. Deselect Export Clipboard.
+Disable Export Clipboard. Go to `Photoshop → Preferences → General`. Deselect Export Clipboard.
 
-* Configure color profiles. Go to Edit -> Color profiles and set RGB space to *sRGB IEC61966-2.1*. The color management policy for RGB should be "Convert to Working RGB".
+Configure color profiles. Go to `Edit -> Color profiles` and set RGB space to `sRGB IEC61966-2.1`. The color management policy for RGB should be "Convert to Working RGB".
