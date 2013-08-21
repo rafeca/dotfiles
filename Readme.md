@@ -27,7 +27,7 @@ are free and can be downloaded and easily installed:
 
 To configure OSX the way I love it, download this repo and run the following command:
 
-    $ osx/configure
+    $ osx/configure.sh
 
 Restart your computer after running this command to be sure that all the changes
 take effect
@@ -47,16 +47,16 @@ Install homebrew:
 
 Install and configure several apps/utilities:
 
-    $ zsh/configure
-    $ git/configure
-    $ iterm2/configure
-    $ sublimetext3/configure
-    $ vim/configure
-    $ transmission/configure
-    $ slate/configure
-    $ utils/nodejs
-    $ utils/ruby
-    $ utils/python
+    $ zsh/configure.sh
+    $ git/configure.sh
+    $ iterm2/configure.sh
+    $ sublimetext3/configure.sh
+    $ vim/configure.sh
+    $ transmission/configure.sh
+    $ slate/configure.sh
+    $ utils/nodejs.sh
+    $ utils/ruby.sh
+    $ utils/python.sh
 
 Install manually the following Sublime Packages:
 
@@ -92,7 +92,7 @@ Next, install the needed non-free apps (avoid Office as long as you can):
 
 When the Photoshop installer finishes execute:
 
-    $ photohop/configure
+    $ photohop/configure.sh
 
 Reduce the Cache Levels. Go to `Photoshop → Preferences → Performance`. Enter a value of `1` in the Cache Levels text box.
 
