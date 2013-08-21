@@ -20,8 +20,8 @@ alias leftHalf ${sox};${soy} max({1024,${ssx}/2});${ssy}
 alias rightHalf ${sox}+max({1024,${ssx}/2});${soy} min({${ssx}-1024,${ssx}/2});${ssy}
 
 # 1 monitor layout
-layout oneScreen 'Skype' move ${rightHalf} 0
-layout oneScreen 'Sublime Text' move ${fullscreen} 0
+layout oneScreen 'Skype' move ${rightHalf}
+layout oneScreen 'Sublime Text' move ${fullscreen}
 layout oneScreen 'Google Chrome' move ${fullscreen}
 layout oneScreen 'iTerm' move ${fullscreen}
 
