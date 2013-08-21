@@ -1,0 +1,10 @@
+" Enable syntax highlight
+syntax on
+
+" indentation stuff
+set autoindent
+set tabstop=2
+set shiftwidth=2
+
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on

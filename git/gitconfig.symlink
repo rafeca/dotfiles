@@ -1,0 +1,29 @@
+[include]
+    path = .gitconfig.credentials
+
+[credential]
+    helper = osxkeychain
+
+[color]
+    ui = true
+
+[core]
+    excludesfile = ~/.gitignore
+
+[apply]
+        whitespace = nowarn
+
+[mergetool]
+        keepBackup = false
+
+[push]
+    default = simple
+
+[alias]
+    lg = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%ae%Creset %Cgreen(%cr)%Creset'
+
+[merge]
+    defaultToUpstream = true
+
+[rerere]
+    enabled = 1

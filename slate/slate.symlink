@@ -1,0 +1,49 @@
+# Cheers, @dmacdougall!
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# aliases
+alias sox screenOriginX
+alias soy screenOriginY
+alias ssx screenSizeX
+alias ssy screenSizeY
+
+alias centered ${sox}+${ssx}/8;${soy}+${ssy}/16 ${ssx}/8*6;${ssy}/16*14
+alias fullscreen ${sox};${soy} ${ssx};${ssy}
+alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
+alias topHalf ${sox};${soy} ${ssx};${ssy}/2
+
+# leftHalf is minimum 1024px (for fitting a web browser)
+alias leftHalf ${sox};${soy} max({1024,${ssx}/2});${ssy}
+alias rightHalf ${sox}+max({1024,${ssx}/2});${soy} min({${ssx}-1024,${ssx}/2});${ssy}
+
+# 1 monitor layout
+layout oneScreen 'Skype' move ${rightHalf} 0
+layout oneScreen 'Sublime Text' move ${fullscreen} 0
+layout oneScreen 'Google Chrome' move ${fullscreen}
+layout oneScreen 'iTerm' move ${fullscreen}
+
+# 2 monitor layout
+layout twoScreen 'Skype' move ${rightHalf} 0
+layout twoScreen 'Sublime Text' move ${rightHalf} 0
+layout twoScreen 'Google Chrome' move ${leftHalf} 0
+layout twoScreen 'iTerm' move ${fullscreen} 1
+
+# Bindings
+bind f:ctrl;alt move ${fullscreen}
+bind c:ctrl;alt move ${centered}
+bind 1:ctrl;alt throw 0
+bind 2:ctrl;alt throw 1
+
+bind r:ctrl;alt relaunch
+bind 1:ctrl;alt;cmd layout oneScreen
+bind 2:ctrl;alt;cmd layout twoScreen
+
+# Undo binding
+bind z:ctrl;alt undo
+
+# Auto switch based on monitors
+default oneScreen count:1
+default twoScreen count:2
