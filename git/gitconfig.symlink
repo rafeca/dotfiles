@@ -11,10 +11,10 @@
     excludesfile = ~/.gitignore
 
 [apply]
-        whitespace = nowarn
+    whitespace = nowarn
 
 [mergetool]
-        keepBackup = false
+    keepBackup = false
 
 [push]
     default = simple
