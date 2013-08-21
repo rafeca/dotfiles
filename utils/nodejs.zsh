@@ -1,8 +1,11 @@
 # initialize nvm
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
 
-# add bash completion
+# add nvm completion
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# add npm completion
+source <(npm completion)
 
 # add node version info to right prompt
 nvm_hook () {
