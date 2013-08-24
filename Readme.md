@@ -13,7 +13,8 @@ into my regular development machine.
 First thing to do is to install the most basic software that I use. All those apps
 are free and can be downloaded and easily installed:
 
-* Google Chrome
+* Google Chrome Canary
+* Firefox Aurora
 * Sublime Text 3
 * Alfred
 * iTerm2

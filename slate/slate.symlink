@@ -26,12 +26,16 @@ layout oneScreen 'Skype' move ${rightHalf}
 layout oneScreen 'Sublime Text' move ${fullscreen}
 layout oneScreen 'Google Chrome' move ${fullscreen}
 layout oneScreen 'iTerm' move ${fullscreen}
+layout oneScreen 'Mail' move ${fullscreen}
+layout oneScreen 'Aurora' move ${fullscreen}
 
 # 2 monitor layout
+layout twoScreen 'Google Chrome' move ${mainCol} 0
+layout twoScreen 'Mail' move ${mainCol} 0
 layout twoScreen 'Skype' move ${rightCol} 0
 layout twoScreen 'Sublime Text' move ${rightCol} 0
-layout twoScreen 'Google Chrome' move ${mainCol} 0
 layout twoScreen 'iTerm' move ${fullscreen} 1
+layout twoScreen 'Aurora' move ${mainCol} 0
 
 # Bindings
 bind f:ctrl;alt move ${fullscreen}
@@ -49,3 +53,4 @@ bind z:ctrl;alt undo
 # Auto switch based on monitors
 default oneScreen count:1
 default twoScreen count:2
+
