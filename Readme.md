@@ -1,4 +1,4 @@
-# my development environment build guide (for OSX 10.9)
+# my development machine build guide
 
 This is a semi-automated guide to configure my system.
 
