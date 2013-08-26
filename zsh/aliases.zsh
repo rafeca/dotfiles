@@ -5,10 +5,13 @@ alias sl=ls
 alias d='dirs -v | head -10'
 
 # git aliases
+alias gc='git commit'
 alias gco='git checkout'
 alias gf='git fetch --prune'
 alias gp='git push origin'
 alias gd='git diff'
+alias gdc='git diff --cached'
+alias ga='git add'
 alias gs='git status -sb'
 alias gff='git merge --ff-only'
 
