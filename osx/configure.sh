@@ -227,8 +227,8 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Add global keyboard shortcuts to go directly to spaces with Ctrl+number
-/usr/libexec/PlistBuddy -c 'Set AppleSymbolicHotKeys:118:enabled true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Set AppleSymbolicHotKeys:119:enabled true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Add AppleSymbolicHotKeys:118:enabled bool true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Add AppleSymbolicHotKeys:119:enabled bool true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 ##################
 # Spotlight
