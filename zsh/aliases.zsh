@@ -1,6 +1,7 @@
 # standard aliases
 alias ll='ls -l'
 alias la='ls -lA'
+alias lt='ls -lrt'
 alias sl=ls
 alias d='dirs -v | head -10'
 
