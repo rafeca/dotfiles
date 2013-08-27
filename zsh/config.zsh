@@ -31,7 +31,7 @@ setopt share_history
 # configure completition
 autoload -Uz compinit
 compinit
-setopt complete_aliases
+setopt no_complete_aliases
 unsetopt correct_all
 
 # configure cd -1, cd -2,...
