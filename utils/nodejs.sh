@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Check for RVM installation
-if [ ! -s ~/.rvm/scripts/rvm ]
+# Check for NVM installation
+if [ ! -s ~/.nvm/nvm.sh ]
 then
-  echo "Installing RVM..."
+  echo "Installing NVM..."
 
   # Install nvm:
   curl https://raw.github.com/creationix/nvm/master/install.sh | sh
