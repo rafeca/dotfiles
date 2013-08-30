@@ -13,6 +13,7 @@ alias gp='git push origin'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias ga='git add'
+alias gap='git add -p'
 alias gs='git status -sb'
 alias gff='git merge --ff-only'
 
