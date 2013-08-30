@@ -13,11 +13,11 @@ then
 
   # Reload the shell
   source ~/.zshrc
-
-  # Install nodejs v0.10.x
-  nvm install 0.10
-  nvm alias default 0.10
 fi
+
+# Install latest nodejs v0.10 version
+nvm install 0.10
+nvm alias default 0.10
 
 # Install some global modules
 npm install -g node-static prettyjson grunt-cli bower
