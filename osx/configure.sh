@@ -126,7 +126,7 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Ask for password after 60s the screensaver appears
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 60
+defaults write com.apple.screensaver askForPasswordDelay -int 300
 
 # Disable GateKeeper (to allow third party apps to be installed)
 sudo spctl --master-disable
