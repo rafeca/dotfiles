@@ -31,7 +31,7 @@ for color in \
 done
 /usr/libexec/PlistBuddy -c "Merge '$(dirname $0)/Solarized Dark.itermcolors' 'New Bookmarks':0" ~/Library/Preferences/com.googlecode.iterm2.plist
 
-# Set ANSI black color bright to 0,0,0
-/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Blue Component' 0" ~/Library/Preferences/com.googlecode.iterm2.plist
-/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Red Component' 0" ~/Library/Preferences/com.googlecode.iterm2.plist
-/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Green Component' 0" ~/Library/Preferences/com.googlecode.iterm2.plist
+# Set ANSI black color bright to 74,74,74
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Blue Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Red Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Green Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
