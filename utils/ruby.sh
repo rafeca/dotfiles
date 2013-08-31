@@ -13,8 +13,15 @@ then
 
   # Add config to the ~/.zshrc file
   echo "source `pwd`/$(dirname $0)/ruby.zsh" >> ~/.zshrc
+
+  # Reload the shell
+  source ~/.zshrc
 fi
 
-# Install some gems
-sudo gem install terminal-notifier
-sudo gem install vagrant
+# Install last patchlevel of Ruby 2.0.0
+rvm install 2.0.0
+rvm use --default 2.0.0
+
+# Install "global" gems
+gem install terminal-notifier
+gem install vagrant
