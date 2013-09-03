@@ -27,3 +27,6 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
+
+# other
+alias oa="open -a "
