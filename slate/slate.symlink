@@ -29,6 +29,14 @@ layout oneScreen 'iTerm' move ${fullscreen}
 layout oneScreen 'Mail' move ${fullscreen}
 layout oneScreen 'Aurora' move ${fullscreen}
 
+# 1 monitor layout (Thunderbolt Display)
+layout hugeScreen 'Skype' move ${rightHalf}
+layout hugeScreen 'Sublime Text' move ${rightHalf}
+layout hugeScreen 'Google Chrome' move ${leftHalf}
+layout hugeScreen 'iTerm' move ${fullscreen}
+layout hugeScreen 'Mail' move ${rightHalf}
+layout hugeScreen 'Aurora' move ${leftHalf}
+
 # 2 monitor layout
 layout twoScreen 'Google Chrome' move ${mainCol} 0
 layout twoScreen 'Mail' move ${mainCol} 0
@@ -38,19 +46,26 @@ layout twoScreen 'iTerm' move ${fullscreen} 1
 layout twoScreen 'Aurora' move ${mainCol} 0
 
 # Bindings
-bind f:ctrl;alt move ${fullscreen}
-bind c:ctrl;alt move ${centered}
-bind 1:ctrl;alt throw 0
-bind 2:ctrl;alt throw 1
+bind f:ctrl;alt           move ${fullscreen}
+bind c:ctrl;alt           move ${centered}
+bind 1:ctrl;alt           throw 0
+bind 2:ctrl;alt           throw 1
+bind left:ctrl;alt        move ${leftHalf}
+bind right:ctrl;alt       move ${rightHalf}
+
+bind right:ctrl;alt;cmd   focus right
+bind left:ctrl;alt;cmd    focus left
 
 bind r:ctrl;alt relaunch
 bind 1:ctrl;alt;cmd layout oneScreen
 bind 2:ctrl;alt;cmd layout twoScreen
+bind 3:ctrl;alt;cmd layout hugeScreen
 
 # Undo binding
 bind z:ctrl;alt undo
 
 # Auto switch based on monitors
 default oneScreen count:1
-default twoScreen count:2
+default hugeScreen resolutions:2560x1440
+default twoScreens count:2
 
