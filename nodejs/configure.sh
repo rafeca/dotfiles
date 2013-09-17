@@ -20,10 +20,13 @@ nvm install 0.10
 nvm alias default 0.10
 
 # Install some global modules
-npm install -g node-static prettyjson grunt-cli bower
+npm install -g node-static prettyjson grunt-cli bower jshint
 
 if [ -z $(npm whoami) ]
 then
   # Login into npm (for publishing)
   npm login
 fi
+
+# Add jshint default config
+ln -s "`pwd`/$(dirname $0)/jshintrc.symlink" ~/.jshintrc
