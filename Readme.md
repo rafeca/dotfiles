@@ -55,9 +55,9 @@ Install and configure several apps/utilities:
     $ vim/configure.sh
     $ transmission/configure.sh
     $ slate/configure.sh
-    $ utils/nodejs.sh
-    $ utils/ruby.sh
-    $ utils/python.sh
+    $ nodejs/configure.sh
+    $ ruby/configure.sh
+    $ python/configure.sh
 
 Install manually the following Sublime Packages:
 
