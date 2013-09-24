@@ -20,7 +20,10 @@
     default = simple
 
 [alias]
-    lg = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%ae%Creset %Cgreen(%cr)%Creset'
+    lg = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%an%Creset %Cgreen(%cr)%Creset'
+
+[pull]
+    rebase = true
 
 [merge]
     defaultToUpstream = true
