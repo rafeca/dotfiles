@@ -3,8 +3,19 @@ syntax on
 
 " indentation stuff
 set autoindent
+set smartindent
 set tabstop=2
 set shiftwidth=2
+set expandtab
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" ui stuff
+set number
+set showmatch
+set showmode
+
+" autocompletition stuff
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menu,longest,preview
