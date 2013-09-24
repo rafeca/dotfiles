@@ -7,6 +7,7 @@ alias d='dirs -v | head -10'
 
 # git aliases
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gco='git checkout'
 alias gf='git fetch --prune'
 alias gp='git push origin'
