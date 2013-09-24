@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * Export public interface
+ */
+module.exports = ${1:this}
+]]></content>
+  <tabTrigger>exports</tabTrigger>
+  <scope>source.js</scope>
+	<description>module.exports</description>
+</snippet>
