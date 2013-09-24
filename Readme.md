@@ -23,6 +23,7 @@ are free and can be downloaded and easily installed:
 * CyberDuck
 * VirtualBox
 * VideoLAN
+* Textual
 
 ## OSX configuration
 
