@@ -1,5 +1,6 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Menlo",
 	"font_size": 18,
 	"gutter": true,
@@ -16,6 +17,5 @@
 	"show_minimap": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true
+	"trim_trailing_white_space_on_save": true
 }
