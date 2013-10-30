@@ -12,6 +12,8 @@ setopt PROMPT_SUBST
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 
+unsetopt RM_STAR_SILENT
+
 # random stuff
 unsetopt beep
 setopt auto_cd
