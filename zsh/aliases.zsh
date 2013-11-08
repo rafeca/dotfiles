@@ -8,6 +8,7 @@ alias d='dirs -v | head -10'
 # git aliases
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gca='git commit --amend'
 alias gco='git checkout'
 alias gf='git fetch --prune'
 alias gp='git push origin'
@@ -17,6 +18,7 @@ alias ga='git add'
 alias gap='git add -p'
 alias gs='git status -sb'
 alias gff='git merge --ff-only'
+alias gst='git stash'
 
 # pushd aliases
 alias 1='cd -'
@@ -31,3 +33,4 @@ alias 9='cd -9'
 
 # other
 alias oa="open -a "
+alias reload='source ~/.zshrc'
