@@ -96,6 +96,8 @@ When the Photoshop installer finishes execute:
 
     $ photohop/configure.sh
 
+Enable the custom profile. Go to `Window → Workspace` and select the `rafeca workspace`.
+
 Reduce the Cache Levels. Go to `Photoshop → Preferences → Performance`. Enter a value of `1` in the Cache Levels text box.
 
 Reduce Amount of History States. Go to `Photoshop → Preferences → Performance`. Enter `10` in the History States text box.
