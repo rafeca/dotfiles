@@ -19,6 +19,9 @@ alias gap='git add -p'
 alias gs='git status -sb'
 alias gff='git merge --ff-only'
 alias gst='git stash'
+alias gri='git rebase --interactive'
+alias grc='git rebase --continue'
+alias grs='git rebase --abort'
 
 # pushd aliases
 alias 1='cd -'
