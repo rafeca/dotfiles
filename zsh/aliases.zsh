@@ -36,4 +36,5 @@ alias 9='cd -9'
 
 # other
 alias oa="open -a "
-alias reload='source ~/.zshrc'
+alias r='source ~/.zshrc'
+alias c='clear'
