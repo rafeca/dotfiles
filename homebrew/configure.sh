@@ -13,7 +13,8 @@ fi
 brew update
 
 # Install some packages
-brew install wget ssh-copy-id coreutils hub
+brew install wget ssh-copy-id coreutils hub tmux reattach-to-user-namespace
+
 
 # Tell applications that use xcode-select where the GNU utils are located
 sudo xcode-select --switch /usr/bin
