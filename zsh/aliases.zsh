@@ -10,6 +10,7 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias gco='git checkout'
+alias gcl='git clone --recursive'
 alias gf='git fetch --prune'
 alias gp='git push origin'
 alias gd='git diff'
@@ -23,6 +24,8 @@ alias gri='git rebase --interactive'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gra='git rebase --abort'
+
+alias git-atpc="git branch --merged | grep -Gv '*' | xargs git branch -d"
 
 # pushd aliases
 alias 1='cd -'
