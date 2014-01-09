@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Check for RVM installation
 if [ ! -s ~/.rvm/scripts/rvm ]
@@ -24,4 +24,3 @@ rvm use --default 2.0.0
 
 # Install "global" gems
 gem install terminal-notifier
-gem install vagrant

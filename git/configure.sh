@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Get full name of the OSX user (cheers @juandebravo!)
 username=`whoami`

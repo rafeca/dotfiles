@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Load all the zsh files in the ~/.zshrc
 echo "# Add dotfiles zsh config" >> ~/.zshrc

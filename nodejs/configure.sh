@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Check for NVM installation
 if [ ! -s ~/.nvm/nvm.sh ]

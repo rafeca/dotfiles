@@ -105,3 +105,19 @@ Reduce Amount of History States. Go to `Photoshop → Preferences → Performanc
 Disable Export Clipboard. Go to `Photoshop → Preferences → General`. Deselect Export Clipboard.
 
 Configure color profiles. Go to `Edit -> Color profiles` and set RGB space to `sRGB IEC61966-2.1`. The color management policy for RGB should be "Convert to Working RGB".
+
+# Debian configuration
+
+This repo can also be used to configure debian systems. To do so, just run:
+
+    $ debian/configure.sh
+
+This will install some basic utilities. From here you can install and configure
+the other stuff:
+
+    $ zsh/configure.sh
+    $ git/configure.sh
+    $ vim/configure.sh
+    $ nodejs/configure.sh
+    $ ruby/configure.sh
+    $ python/configure.sh
