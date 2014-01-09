@@ -16,6 +16,10 @@ alias bottomHalf ${sox};${soy}+${ssy}/2 ${ssx};${ssy}/2
 alias topHalf ${sox};${soy} ${ssx};${ssy}/2
 alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
 alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
+alias topleftHalf ${sox};${soy} ${ssx}/2;${ssy}/2
+alias toprightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}/2
+alias bottomleftHalf ${sox};${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
+alias bottomrightHalf ${sox}+${ssx}/2;${soy}+${ssy}/2 ${ssx}/2;${ssy}/2
 
 # mainCol is minimum 1024px (for fitting a web browser)
 alias mainCol ${sox};${soy} max({1024,${ssx}/2});${ssy}
@@ -55,6 +59,12 @@ bind 1:ctrl;alt           throw 0
 bind 2:ctrl;alt           throw 1
 bind left:ctrl;alt        move ${leftHalf}
 bind right:ctrl;alt       move ${rightHalf}
+bind up:ctrl;alt          move ${topHalf}
+bind down:ctrl;alt        move ${bottomHalf}
+bind pad7:ctrl;alt        move ${topleftHalf}
+bind pad9:ctrl;alt        move ${toprightHalf}
+bind pad1:ctrl;alt        move ${bottomleftHalf}
+bind pad3:ctrl;alt        move ${bottomrightHalf}
 
 bind right:ctrl;alt;cmd   focus right
 bind left:ctrl;alt;cmd    focus left
