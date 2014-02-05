@@ -60,13 +60,6 @@ Install and configure several apps/utilities:
     $ ruby/configure.sh
     $ python/configure.sh
 
-Install manually the following Sublime Packages:
-
-* EditorConfig
-* LESS
-* sass
-* SublimeLinter (TODO: Not yet available for ST3)
-
 ## Mission control
 
 Create 2 spaces in Mission control
