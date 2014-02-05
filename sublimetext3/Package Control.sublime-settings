@@ -1,0 +1,15 @@
+{
+	"installed_packages":
+	[
+		"EditorConfig",
+		"Handlebars",
+		"LESS",
+		"LineEndings",
+		"Pretty JSON",
+		"Protocol Buffer Syntax",
+		"Sass",
+		"SublimeLinter",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-jshint"
+	]
+}
