@@ -14,6 +14,9 @@ then
   # Add config to the ~/.zshrc file
   echo "source `pwd`/$(dirname $0)/ruby.zsh" >> ~/.zshrc
 
+  # Configure default gems to all gemsets
+  echo "bundler" > ~/.rvm/gemsets/default.gems
+
   # Reload the shell
   source ~/.zshrc
 fi
