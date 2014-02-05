@@ -81,4 +81,3 @@ bind z:ctrl;alt undo
 default oneScreen count:1
 default hugeScreen resolutions:2560x1440
 default twoScreens count:2
-
