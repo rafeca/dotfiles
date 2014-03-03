@@ -46,6 +46,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
     'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 zstyle ':completion:*' menu select
+zstyle ':completion:*' users rafeca root
 
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
