@@ -16,7 +16,6 @@ are free and can be downloaded and easily installed:
 * Google Chrome
 * Google Chrome Canary
 * Sublime Text 3
-* Alfred
 * iTerm2
 * Slate
 * Transmission
@@ -51,6 +50,7 @@ Install and configure several apps/utilities:
 
     $ zsh/configure.sh
     $ git/configure.sh
+    $ alfred/configure.sh
     $ iterm2/configure.sh
     $ sublimetext3/configure.sh
     $ vim/configure.sh
