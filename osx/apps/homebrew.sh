@@ -20,13 +20,8 @@ sudo xcode-select --switch /usr/bin
 
 # Install homebrew cask
 brew tap phinze/homebrew-cask
+brew tap caskroom/versions
 brew install brew-cask
-
-# Install quicklook plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json && qlmanage -r
-
-# Install vagrant
-brew cask install vagrant
 
 # Install a newer version of html tidy (for SublimeLinter package)
 brew install homebrew/dupes/tidy

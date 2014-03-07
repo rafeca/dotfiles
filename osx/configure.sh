@@ -4,6 +4,13 @@
 # General stuff
 ###############
 
+# Add a
+
+defaults write com.apple.loginwindow.plist LoginwindowText -string "This Mac belongs to Rafael de Oleza. If you find it, please call +46707690006 or email rafeca@gmail.com"
+sudo nvram good-samaritan-message="This Mac belongs to Rafael de Oleza%0aIf you find it, please call +46707690006 or email rafeca@gmail.com%0aThanks\!"
+sudo touch /System/Library/Extensions
+
+
 # Set computer name (as done via System Preferences → Sharing)
 read -p "Enter your machine name: " machine_name
 sudo scutil --set ComputerName "$machine_name"
@@ -17,9 +24,6 @@ defaults write NSGlobalDomain AppleLanguages -array "en" "es"
 defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
-
-# Make ZSH as the default shell for the current user
-sudo chsh -s /bin/zsh "`whoami`"
 
 ##############
 # General UI

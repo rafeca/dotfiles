@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+brew cask install limechat
+
 defaults write net.limechat.LimeChat "Preferences.General.join_on_doubleclick" -bool true
 defaults write net.limechat.LimeChat "Preferences.General.show_join_leave" -bool false
 

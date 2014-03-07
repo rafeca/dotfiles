@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+brew cask install transmission
+
 # Set up
 mkdir -p ~/Downloads/tmp
 mkdir -p ~/Downloads/bt
