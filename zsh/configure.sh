@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load all the zsh files in the ~/.zshrc
-echo "# Add dotfiles zsh config" >> ~/.zshrc
+echo "# dotfiles zsh config" >> ~/.zshrc
 echo "source `pwd`/$(dirname $0)/main.zsh" >> ~/.zshrc
 
 # Create basic folders
