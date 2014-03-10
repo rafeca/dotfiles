@@ -5,6 +5,8 @@ brew cask install sublime-text3
 # Add subl CLI
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
+subl && sleep 1
+
 # Install Package Control
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P "$HOME/Library/Application Support/Sublime Text 3/Installed Packages/" -N
 
