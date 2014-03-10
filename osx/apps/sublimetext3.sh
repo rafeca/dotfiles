@@ -15,3 +15,6 @@ ln -s "$(pwd)/$(dirname $0)/sublimetext3/Package Control.sublime-settings" "$HOM
 
 # Link snippets
 ln -s "$(pwd)/$(dirname $0)/sublimetext3/snippets" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Snippets"
+
+# Add shortcut to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$HOME/Applications/Sublime Text.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"

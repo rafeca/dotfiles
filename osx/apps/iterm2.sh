@@ -37,3 +37,6 @@ done
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Blue Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Red Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Ansi 8 Color':'Green Component' 74" ~/Library/Preferences/com.googlecode.iterm2.plist
+
+# Add shortcut to Dock
+defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$HOME/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
