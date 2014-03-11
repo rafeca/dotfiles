@@ -2,15 +2,16 @@
 	"installed_packages":
 	[
 		"EditorConfig",
+		"GitGutter",
 		"Handlebars",
 		"LESS",
 		"LineEndings",
-		"Modific",
 		"Pretty JSON",
 		"Protocol Buffer Syntax",
 		"Sass",
 		"SublimeLinter",
 		"SublimeLinter-html-tidy",
-		"SublimeLinter-jshint"
+		"SublimeLinter-jshint",
+		"SublimeLinter-json"
 	]
 }
