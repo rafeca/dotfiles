@@ -4,12 +4,12 @@ autoload colors && colors
 git="git"
 
 git_dirty() {
-  st=$($git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
+  st=$($git status --porcelain 2>/dev/null | tail -n 1)
+  if [[ $st =~ ^fatal ]]
   then
     echo ""
   else
-    if [[ "$st" =~ ^nothing ]]
+    if [[ $st = "" ]]
     then
       echo "%{$fg[green]%}$(git_prompt_info)%{$reset_color%}"
     else
