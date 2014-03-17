@@ -1,4 +1,10 @@
- # Load RVM into a shell session *as a function*
+# Add rvm bin directory to path
+PATH=$PATH:$HOME/.rvm/bin
+
+# unload rvm
+[ "$(type __rvm_unload | grep function)" ] && __rvm_unload
+
+# Load RVM into a shell session *as a function*
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 # rvm zsh completion
