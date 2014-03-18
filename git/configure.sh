@@ -2,7 +2,7 @@
 
 # Get full name of the OSX user (cheers @juandebravo!)
 username=`whoami`
-default_git_name="`finger $username | head -n1 | cut -d ":" -f 3 | cut -c 2-`"
+default_git_name="`finger $USER | head -n1 | cut -d ":" -f 3 | cut -c 2-`"
 
 # Ask for credentials
 read -p "Enter your git full name ($default_git_name): " git_name

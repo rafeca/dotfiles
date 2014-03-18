@@ -4,12 +4,18 @@
 # General stuff
 ###############
 
-# Add a
+# Ask for user info
+default_fullname="`finger $USER | head -n1 | cut -d ":" -f 3 | cut -c 2-`"
+echo "Setting good samaritan message..."
+read -p "Enter your full name ($default_fullname): " fullname
+read -p "Enter your email: " email
+read -p "Enter your phone number: " phone
+fullname=${fullname:-$default_fullname}
 
-defaults write com.apple.loginwindow.plist LoginwindowText -string "This Mac belongs to Rafael de Oleza. If you find it, please call +46707690006 or email rafeca@gmail.com"
-sudo nvram good-samaritan-message="This Mac belongs to Rafael de Oleza%0aIf you find it, please call +46707690006 or email rafeca@gmail.com%0aThanks\!"
+# Add an alert in the login screen
+defaults write com.apple.loginwindow.plist LoginwindowText -string "This Mac belongs to $fullname. If you find it, please call $phone or email $email"
+sudo nvram good-samaritan-message="This Mac belongs to $fullname%0aIf you find it, please call $phone or email $email%0aThanks\!"
 sudo touch /System/Library/Extensions
-
 
 # Set computer name (as done via System Preferences → Sharing)
 read -p "Enter your machine name: " machine_name
