@@ -43,24 +43,10 @@ There is some stuff in OSX that has to be configured manually:
 
 Create 2 spaces in Mission control
 
-### Synchronization with cloud services.
-
-* Go to `preferences -> iCloud` and sync Contacts, Calendars, Reminders, Notes,
-  Safari and Documents & Data (do not syncronize mail).
-* Go to `preferences -> Internet Accounts` and add Google (only Calendar syncronization).
-
 ### iPhone
 
 Connect the iPhone and Open `Image Capture`. Then select the iPhone and change
 the select box to: "Connecting this device opens: No Application"
-
-### Additional software
-
-Next, install the needed non-free apps (avoid Office as long as you can):
-
-* iLife '11
-* iWork '09
-* Adobe Photoshop
 
 ### Photoshop configuration
 
