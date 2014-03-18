@@ -9,6 +9,7 @@ echo "source `pwd`/$(dirname $0)/main.zsh" >> ~/.zshrc
 
 # Create basic folders
 mkdir -p ~/bin
+mkdir -p ~/tmp
 
 mkdir -p ~/Documents/work/opensource
 mkdir -p ~/Documents/buro

@@ -179,7 +179,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
 
 ############
-# Dock stuff
+# Dock
 ############
 
 # Automatically hide and show the Dock
@@ -291,3 +291,14 @@ defaults write com.apple.iTunes disablePing -bool true
 ##################
 
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+##################
+# Folders
+##################
+
+# Remove not needed folders
+sudo rm -fr ~/Music ~/Pictures ~/Movies
+
+# Not share public folder and remove it
+sudo sharing -r $HOME/Public
+sudo rm -fr ~/Public
