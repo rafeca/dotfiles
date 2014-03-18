@@ -106,7 +106,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
 
-
 # Default to list view in Finder windows (others: `icnv`, `clmv`, `Flwv`)
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
@@ -123,6 +122,10 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Personalize Finder sidebar
+cp "$(pwd)/$(dirname $0)/config/com.apple.sidebarlists.plist" ~/Library/Preferences/
+plutil -convert binary1 ~/Library/Preferences/com.apple.sidebarlists.plist
 
 ################
 # Security
@@ -302,3 +305,11 @@ sudo rm -fr ~/Music ~/Pictures ~/Movies
 # Not share public folder and remove it
 sudo sharing -r $HOME/Public
 sudo rm -fr ~/Public
+
+####################
+# Kill processes
+####################
+
+killall cfprefsd
+killall Finder
+killall Dock
