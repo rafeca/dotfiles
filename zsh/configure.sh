@@ -13,3 +13,4 @@ mkdir -p ~/tmp
 
 mkdir -p ~/Documents/work/opensource
 mkdir -p ~/Documents/buro
+mkdir -p ~/Documents/random
