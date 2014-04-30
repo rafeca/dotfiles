@@ -1,9 +1,24 @@
+" Configure vundle
+set nocompatible
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Add some bundles
+Bundle 'gmarik/vundle'
+Bundle 'Shougo/unite.vim'
+Bundle 'groenewege/vim-less'
+
+" Configure unite
+nnoremap <leader>t :<C-u>Unite -buffer-name=files -start-insert file<cr>
+nnoremap <leader>o :<C-u>Unite -buffer-name=buffer buffer<cr>
+
 " Enable syntax highlight
 syntax on
 
 " indentation stuff
 set autoindent
 set smartindent
+set copyindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -15,7 +30,35 @@ filetype indent plugin on
 set number
 set showmatch
 set showmode
+set title
+
+" set status line
+set laststatus=2
 
 " autocompletition stuff
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,longest,preview
+
+" allow switching buffers without saving
+set hidden
+
+" search stuff
+set hlsearch
+set incsearch
+
+" dont create backups
+set nobackup
+set noswapfile
+
+" change between windows easily
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" init pathogen
+execute pathogen#infect()
+:call pathogen#helptags()
+
+" enable mouse scroll
+set mouse=a
