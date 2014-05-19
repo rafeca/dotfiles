@@ -50,8 +50,6 @@ zstyle ':completion:*' users rafeca root
 
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-
-
 # Allow arrow up to go up in history
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
