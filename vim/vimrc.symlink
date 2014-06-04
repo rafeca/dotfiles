@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Shougo/unite.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'Yggdroot/indentLine'
 
 " Configure unite
 nnoremap <leader>t :<C-u>Unite -buffer-name=files -start-insert file<cr>
@@ -23,14 +24,26 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" display tabs
+:set list lcs=tab:\ »
+
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
 
 " ui stuff
 set number
+set ruler
 set showmatch
+:hi MatchParen cterm=underline ctermbg=none ctermfg=none
 set showmode
 set title
+
+" 80 chars rule
+:hi ColorColumn guibg=#000000 ctermbg=0
+:let &colorcolumn=join(range(81,999),",")
+
+" highlight trailing whitespace
+match ErrorMsg '\s\+$'
 
 " set status line
 set laststatus=2
