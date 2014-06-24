@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"DocBlockr",
 		"EditorConfig",
 		"GitGutter",
 		"Handlebars",
