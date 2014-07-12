@@ -19,6 +19,7 @@
   "trailing": true,
   "smarttabs": false,
   "maxlen": 80,
+  "sub": true,
   "maxstatements": 20,
   "maxcomplexity": 9,
   "maxdepth": 2,
