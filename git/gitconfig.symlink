@@ -20,7 +20,7 @@
     keepBackup = false
 
 [push]
-    default = upstream
+    default = simple
 
 [alias]
     lg = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%an%Creset %Cgreen(%ad)%Creset'
