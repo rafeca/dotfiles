@@ -26,6 +26,7 @@ alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gra='git rebase --abort'
 
+# git branches at the puta calle
 alias git-atpc="git branch --merged | grep -Gv '*' | xargs git branch -d"
 
 # pushd aliases

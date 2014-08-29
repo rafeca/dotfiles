@@ -10,7 +10,7 @@ defaults write com.skype.skype UserDefinedEvents '{ FirstMessageReceived = { Dis
 
 # Telegram
 ##########
-brew cask install messenger-for-telegram
+brew cask install telegram
 
 # Minecraft
 ###########
