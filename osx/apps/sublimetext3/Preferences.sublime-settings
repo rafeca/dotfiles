@@ -1,5 +1,6 @@
 {
 	"color_scheme": "Packages/User/Solarized (Dark) (SL).tmTheme",
+	"theme": "Default.sublime-theme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Menlo",
 	"font_size": 18,

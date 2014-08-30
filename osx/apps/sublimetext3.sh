@@ -15,6 +15,9 @@ rm -f "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preference
 ln -s "$(pwd)/$(dirname $0)/sublimetext3/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 ln -s "$(pwd)/$(dirname $0)/sublimetext3/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
 
+# Link theme file
+ln -s "$(pwd)/$(dirname $0)/sublimetext3/Default.sublime-theme" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-theme"
+
 # Link snippets
 ln -s "$(pwd)/$(dirname $0)/sublimetext3/snippets" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Snippets"
 
