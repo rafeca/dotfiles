@@ -79,11 +79,14 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Enable spring loading for directories
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+# Disable spring loading for directories
+defaults write NSGlobalDomain com.apple.springing.enabled -bool false
 
 # Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0.1
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.667
+
+# Disable opening folders in Finder tabs
+defaults write com.apple.finder FinderSpawnTab -bool false
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
