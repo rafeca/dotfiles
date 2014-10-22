@@ -44,3 +44,7 @@ alias 9='cd -9'
 alias oa="open -a "
 alias r='source ~/.zshrc'
 alias c='clear'
+
+function readbytes {
+  xxd -p -seek $2 -l $3 $1
+}
