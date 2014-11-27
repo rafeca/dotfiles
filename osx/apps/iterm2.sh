@@ -3,7 +3,7 @@
 brew cask install iterm2
 
 # Open the app so the preference files get initialized
-open -a iTerm && sleep 1
+sleep 5 && open -a iTerm && sleep 5
 
 # Disable warning when quitting
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

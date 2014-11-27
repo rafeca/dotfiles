@@ -6,7 +6,7 @@ then
   echo "Installing Homebrew..."
 
   # Install homebrew
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 fi
 
@@ -15,9 +15,6 @@ brew update
 
 # Install some packages
 brew install wget ssh-copy-id coreutils hub trash tmux reattach-to-user-namespace
-
-# Tell applications that use xcode-select where the GNU utils are located
-sudo xcode-select --switch /usr/bin
 
 # Install homebrew cask
 brew tap phinze/homebrew-cask

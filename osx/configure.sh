@@ -188,7 +188,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Enable 3-fingers drag
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
 ############
 # Dock
