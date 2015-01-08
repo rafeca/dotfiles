@@ -19,7 +19,7 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$($git symbolic-ref --short HEAD 2>/dev/null || $git rev-parse --short HEAD 2>/dev/null) || return
+ ref=$($git symbolic-ref --short HEAD 2>/dev/null || $git describe --tags --exact-match 2>/dev/null || $git rev-parse --short HEAD 2>/dev/null) || return
  echo "($ref) "
 }
 
