@@ -22,8 +22,8 @@ then
 fi
 
 # Install last patchlevel of Ruby 2.0.0
-rvm install 2.0.0
-rvm use --default 2.0.0
+rvm install ruby-2.1
+rvm use --default ruby-2.1
 
 # Install "global" gems
 gem install terminal-notifier
