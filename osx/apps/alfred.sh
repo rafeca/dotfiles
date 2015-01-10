@@ -3,7 +3,7 @@
 brew cask install alfred
 
 # Open the app so the preference files get initialized
-sleep 5 && open -a "Alfred 2" && sleep 5
+open "$HOME/Applications/Alfred 2.app"
 
 # TODO: looks like this doesnt work
 brew cask alfred link

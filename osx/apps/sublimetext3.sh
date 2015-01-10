@@ -8,7 +8,8 @@ mkdir -p ~/bin
 # Add subl CLI
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
-subl && sleep 3
+# Open the app so the config files get initialized
+open -g "$HOME/Applications/Sublime Text.app" && sleep 2 && osascript -e 'quit app "Sublime Text"'
 
 # Install Package Control
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P "$HOME/Library/Application Support/Sublime Text 3/Installed Packages/" -N
