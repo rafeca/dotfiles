@@ -6,7 +6,7 @@ then
   echo "Installing NVM..."
 
   # Install nvm:
-  curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+  curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash
 
   # Configure nvm in the ~/.zshrc file:
   echo "source `pwd`/$(dirname $0)/nodejs.zsh" >> ~/.zshrc
