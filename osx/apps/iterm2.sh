@@ -3,7 +3,7 @@
 brew cask install iterm2
 
 # Open the app so the preference files get initialized
-sleep 5 && open -a iTerm && sleep 5
+sleep 3 && open -a iTerm && sleep 2 && osascript -e 'quit app "iTerm"' && sleep 2
 
 # Disable warning when quitting
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -43,3 +43,6 @@ done
 
 # Add shortcut to Dock
 defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$HOME/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+
+# reset the preferences cache
+killall cfprefsd
