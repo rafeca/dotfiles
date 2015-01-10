@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install latest version of git
+brew install git
+
 # Get full name of the OSX user (cheers @juandebravo!)
 username=`whoami`
 default_git_name="`finger $USER | head -n1 | cut -d ":" -f 3 | cut -c 2-`"
