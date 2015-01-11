@@ -9,6 +9,7 @@
 	],
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
 		"DocBlockr",
 		"EditorConfig",
 		"GitGutter",

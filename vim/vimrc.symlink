@@ -8,6 +8,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Shougo/unite.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Yggdroot/indentLine'
+Plugin 'chriskempson/base16-vim'
 
 " Configure unite
 nnoremap <leader>t :<C-u>Unite -buffer-name=files -start-insert file<cr>
@@ -37,6 +38,7 @@ set showmatch
 :hi MatchParen cterm=underline ctermbg=none ctermfg=none
 set showmode
 set title
+colorscheme base16-chalk
 
 " 80 chars rule
 :hi ColorColumn guibg=#000000 ctermbg=0
