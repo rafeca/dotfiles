@@ -9,6 +9,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'Yggdroot/indentLine'
 Plugin 'chriskempson/base16-vim'
+Plugin 'bling/vim-airline'
 
 " Configure unite
 nnoremap <leader>t :<C-u>Unite -buffer-name=files -start-insert file<cr>
@@ -32,6 +33,7 @@ set expandtab
 filetype indent plugin on
 
 " ui stuff
+set t_Co=256
 set number
 set ruler
 set showmatch
@@ -41,7 +43,7 @@ set title
 colorscheme base16-chalk
 
 " 80 chars rule
-:hi ColorColumn guibg=#000000 ctermbg=0
+:highlight ColorColumn ctermbg=235 guibg=#2c2d27
 :let &colorcolumn=join(range(81,999),",")
 
 " highlight trailing whitespace
