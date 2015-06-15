@@ -14,8 +14,8 @@ fi
 
 # Install latest nodejs v0.10 version
 . ~/.nvm/nvm.sh
-nvm install 0.10
-nvm alias default 0.10
+nvm install 0.12
+nvm alias default 0.12
 
 # Install some global modules
 npm install -g node-static node-inspector prettyjson grunt-cli bower jshint
