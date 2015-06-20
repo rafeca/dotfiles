@@ -2,7 +2,7 @@
 	"color_scheme": "Packages/Base16 Color Schemes/base16-chalk.dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Menlo",
-	"font_size": 18,
+	"font_size": 19,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
