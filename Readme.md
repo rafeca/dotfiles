@@ -29,6 +29,11 @@ The last step is to install and configure several apps/utilities:
 
 There is some stuff in OSX that has to be configured manually:
 
+### Install Apple apps
+
+Open the App Store and install the Apple apps that can't be installed via
+brew cask: iMovie, Pages, Numbers and Keynote.
+
 ### Mission control
 
 Create 2 spaces in Mission control

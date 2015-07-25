@@ -26,3 +26,14 @@ ln -s "$HOME/Documents/random/minecraft/saves" "$HOME/Library/Application Suppor
 ###########
 
 brew cask install wacom-bamboo-tablet
+
+# Steam app
+###########
+
+brew cask install steam
+
+
+# Firefox
+###########
+
+brew cask install firefox

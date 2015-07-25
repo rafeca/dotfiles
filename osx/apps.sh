@@ -9,6 +9,7 @@ osx/apps/slack.sh
 osx/apps/slate.sh
 osx/apps/spotify.sh
 osx/apps/sublimetext3.sh
+osx/apps/the-unarchiver.sh
 osx/apps/transmission.sh
 osx/apps/vagrant.sh
 osx/apps/videolan.sh
