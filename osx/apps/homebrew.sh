@@ -22,4 +22,4 @@ brew tap caskroom/versions
 brew install brew-cask
 
 # Install a newer version of html tidy (for SublimeLinter package)
-brew install homebrew/dupes/tidy
+brew install tidy-html5

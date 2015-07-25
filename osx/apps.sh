@@ -4,9 +4,10 @@ osx/apps/alfred.sh
 osx/apps/chrome.sh
 osx/apps/cyberduck.sh
 osx/apps/iterm2.sh
-osx/apps/limechat.sh
 osx/apps/quicklookplugins.sh
+osx/apps/slack.sh
 osx/apps/slate.sh
+osx/apps/spotify.sh
 osx/apps/sublimetext3.sh
 osx/apps/transmission.sh
 osx/apps/vagrant.sh
