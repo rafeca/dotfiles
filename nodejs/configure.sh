@@ -10,6 +10,8 @@ then
 
   # Configure nvm in the ~/.zshrc file:
   echo "source `pwd`/$(dirname $0)/nodejs.zsh" >> ~/.zshrc
+
+  echo "[[ -s \$HOME/.nvm/nvm.sh ]] && . \$HOME/.nvm/nvm.sh # This loads NVM" >> ~/.zprofile
 fi
 
 # Install latest nodejs v0.10 version
@@ -18,7 +20,7 @@ nvm install 0.12
 nvm alias default 0.12
 
 # Install some global modules
-npm install -g node-static node-inspector prettyjson grunt-cli bower jshint
+npm install -g node-static node-inspector prettyjson grunt-cli gulp eslint
 
 if [ "Not authed.  Run 'npm adduser'" = "$(npm whoami)" ]
 then
@@ -27,4 +29,4 @@ then
 fi
 
 # Add jshint default config
-ln -s "`pwd`/$(dirname $0)/jshintrc.symlink" ~/.jshintrc
+ln -s "`pwd`/$(dirname $0)/eslintrc.symlink" ~/.eslintrc

@@ -19,7 +19,6 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-html-tidy",
-		"SublimeLinter-jshint",
 		"SublimeLinter-json"
 	]
 }
