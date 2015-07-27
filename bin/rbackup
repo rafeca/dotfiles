@@ -1,0 +1,56 @@
+#!/bin/bash
+
+function usage {
+  echo "Usage: `basename $0` <from> <to> (e.g: '`basename $0` ~/Documents /Volumes/hdd/Backup')"
+  echo
+  echo "  from      should be the origin folder that you want to backup"
+  echo "  to        should be the destination folder where you want to store the"
+  echo "            backup. It's usually on an external hard drive."
+}
+
+# Check that the arguments are valid
+if [ $# -ne 2 ]; then
+  usage
+  exit 1
+fi
+
+# Use the current date as the backup folder (like Time Machine)
+date=`date -u "+%Y-%m-%d-%H%M%S"`
+
+# It's important to add a trailing slash at the end of the from path, so rsync works correctly
+from=${1%/}/
+to=${2%/}
+
+# Check if the from folder exists
+if [ ! -d "$from" ]; then
+  echo "The specified origin folder does not exist!"
+  exit 1
+fi
+
+# Create the destination folder if it does not exist
+mkdir -p $to
+if [ $? -ne 0 ] ; then
+  echo "Could not create the destination folder. Please check if you have write permissions"
+  exit 1
+fi
+
+# Do the actual backup
+if [ ! -L "$to/Latest" ]; then
+  echo "First Backup!"
+  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules --exclude=.git $from $to/$date
+else
+  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules --exclude=.git --link-dest=$to/Latest $from $to/$date
+fi
+
+# Remove the backup folder and exit if there is an rsync error or if the user presses Ctrl+C
+if [ $? -ne 0 ] ; then
+  echo "Error executing rsync process... Deleting the incomplete backup"
+  rm -fr $to/$date
+  exit 1
+fi
+
+# Recreate the "Latest" symlink to replicate Time Machine
+rm $to/Latest
+ln -sf $to/$date $to/Latest
+
+echo "Backup created in $to/Latest"
