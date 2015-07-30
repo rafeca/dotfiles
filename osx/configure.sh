@@ -110,6 +110,11 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
+# Remove unnecessary icons from Desktop
+defaults write com.apple.finder.plist ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder.plist ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder.plist ShowRemovableMediaOnDesktop -bool false
+
 # Increase grid icons and spacing for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
