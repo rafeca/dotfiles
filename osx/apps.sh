@@ -13,3 +13,6 @@ osx/apps/the-unarchiver.sh
 osx/apps/transmission.sh
 osx/apps/vagrant.sh
 osx/apps/videolan.sh
+
+# Restart the Dock as some apps may have modified it
+killall Dock

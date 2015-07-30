@@ -44,6 +44,11 @@ alias 9='cd -9'
 alias oa="open -a "
 alias r='source ~/.zshrc'
 alias c='clear'
+alias rsize='gdu -hs * | gsort -h'
+
+function fsize {
+  find $1 -name $2 -type d -prune -exec gdu -hs {} \; | gsort -h
+}
 
 function readbytes {
   xxd -p -seek $2 -l $3 $1
