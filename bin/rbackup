@@ -37,9 +37,9 @@ fi
 # Do the actual backup
 if [ ! -L "$to/Latest" ]; then
   echo "First Backup!"
-  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules --exclude=.git $from $to/$date
+  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules $from $to/$date
 else
-  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules --exclude=.git --link-dest=$to/Latest $from $to/$date
+  rsync -aP --log-file=$to.log --exclude=.DS_Store --exclude=.gems --exclude=node_modules --link-dest=$to/Latest $from $to/$date
 fi
 
 # Remove the backup folder and exit if there is an rsync error or if the user presses Ctrl+C
