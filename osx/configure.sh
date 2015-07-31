@@ -330,6 +330,18 @@ sudo rm -fr ~/Music ~/Pictures ~/Movies
 sudo sharing -r $HOME/Public
 sudo rm -fr ~/Public
 
+##################
+# Photo Booth
+##################
+mkdir -p
+mkdir -p "$HOME/Documents/Pictures/Photo Booth Library"
+
+rm -fr "$HOME/Pictures/Photo Booth Library"
+ln -s "$HOME/Documents/Pictures/Photo Booth Library" "$HOME/Pictures/Photo Booth Library"
+
+# Tell the system that the Photo Booth is a bundle
+xattr -wx com.apple.FinderInfo "00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $HOME/Documents/Pictures/Photo Booth Library
+
 ####################
 # Kill processes
 ####################
