@@ -26,6 +26,12 @@ alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gra='git rebase --abort'
 
+# mercurial aliases
+alias hc='hg commit'
+alias hcm='hg commit -m'
+alias hs='hg status'
+alias ha='hg add'
+
 # git branches at the puta calle
 alias git-atpc="git branch --merged | grep -Gv '*' | xargs git branch -d"
 
