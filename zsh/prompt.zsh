@@ -34,9 +34,26 @@ hg_dirty() {
   fi
 }
 
+get_hg_path() {
+  d=$(pwd)
+  while : ; do
+    if test -d "$d/.hg" ; then
+      hg=$d
+      break
+    fi
+    test "$d" = / && break
+    d=$(cd -P "$d/.." && echo "$PWD")
+  done
+  echo $d
+}
+
 hg_prompt_info () {
-  ref=$($hg branch)
-  echo "{$ref} "
+  local current="$(get_hg_path)/.hg/bookmarks.current"
+  if  [[ -f "$current" ]]; then
+    echo "{$(cat "$current")} "
+  else
+    echo "{default} "
+  fi
 }
 
 git_prompt_info () {
