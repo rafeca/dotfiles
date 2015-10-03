@@ -61,10 +61,10 @@ bind left:ctrl;alt        move ${leftHalf}
 bind right:ctrl;alt       move ${rightHalf}
 bind up:ctrl;alt          move ${topHalf}
 bind down:ctrl;alt        move ${bottomHalf}
-bind pad7:ctrl;alt        move ${topleftHalf}
-bind pad9:ctrl;alt        move ${toprightHalf}
-bind pad1:ctrl;alt        move ${bottomleftHalf}
-bind pad3:ctrl;alt        move ${bottomrightHalf}
+bind [:ctrl;alt           move ${topleftHalf}
+bind ]:ctrl;alt           move ${toprightHalf}
+bind ':ctrl;alt           move ${bottomleftHalf}
+bind backslash:ctrl;alt   move ${bottomrightHalf}
 
 bind right:ctrl;alt;cmd   focus right
 bind left:ctrl;alt;cmd    focus left
