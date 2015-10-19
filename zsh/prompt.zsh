@@ -22,15 +22,13 @@ git_dirty() {
 
 hg_dirty() {
   # mercurial information
-  if [ -d .hg ]; then
+  if [ "$(get_hg_path)" != "/" ]; then
     if [[ $($hg status) = "" ]]
     then
       echo "%{$fg[green]%}$(hg_prompt_info)%{$reset_color%}"
     else
       echo "%{$fg[red]%}$(hg_prompt_info)%{$reset_color%}"
     fi
-
-
   fi
 }
 
