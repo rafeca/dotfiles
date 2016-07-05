@@ -52,6 +52,8 @@ alias r='source ~/.zshrc'
 alias c='clear'
 alias rsize='gdu -hs * | gsort -h'
 
+alias pp='pbpaste | pbcopy'
+
 function fsize {
   find $1 -name $2 -type d -prune -exec gdu -hs {} \; | gsort -h
 }
