@@ -15,6 +15,12 @@ set-option -g mouse-select-window on
 # reload config shortcut
 bind-key r source-file ~/.tmux.conf
 
+# enable vi mode
+set-window-option -g mode-keys vi
+
+# buffer size
+set-option -g history-limit 5000
+
 ### COLOUR - Solarized
 
 # default statusbar colors
