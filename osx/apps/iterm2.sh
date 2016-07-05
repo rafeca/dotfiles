@@ -11,8 +11,18 @@ open -g "$HOME/Applications/iTerm.app" && sleep 2 && osascript -e 'quit app "iTe
 # Show tab bar in FullScreen
 defaults write com.googlecode.iterm2 ShowFullScreenTabBar -bool true
 
-# Set font to Menlo Regular 24px
+# Change the name of the bookmark to tmux
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Name' tmux" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
+# Set font to Menlo Regular 18px
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Normal Font' Menlo-Regular 18" ~/Library/Preferences/com.googlecode.iTerm2.plist
+/usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Non Ascii Font' Menlo-Regular 18" ~/Library/Preferences/com.googlecode.iTerm2.plist
+
+# Set up a trigger to generate notifications
+/usr/libexec/PlistBuddy -c "Add 'New Bookmarks':0:'Triggers': dict" ~/Library/Preferences/com.googlecode.iTerm2.plist
+/usr/libexec/PlistBuddy -c "Add 'New Bookmarks':0:'Triggers':0:'regex' string ##TERMINAL_NOTIFY:([^#]*)##" ~/Library/Preferences/com.googlecode.iTerm2.plist
+/usr/libexec/PlistBuddy -c "Add 'New Bookmarks':0:'Triggers':0:'action' string GrowlTrigger" ~/Library/Preferences/com.googlecode.iTerm2.plist
+/usr/libexec/PlistBuddy -c "Add 'New Bookmarks':0:'Triggers':0:'parameter' string iTerm command: \\\\1" ~/Library/Preferences/com.googlecode.iTerm2.plist
 
 # Reuse previous session directory
 /usr/libexec/PlistBuddy -c "Set 'New Bookmarks':0:'Custom Directory' Recycle" ~/Library/Preferences/com.googlecode.iTerm2.plist
