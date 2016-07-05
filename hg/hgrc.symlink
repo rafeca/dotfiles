@@ -3,3 +3,5 @@
 [extensions]
 color =
 
+ninja = !$HG addremove . && $HG amend "$@" --rebase
+showstat = diff -r $1^1..$1 --stat
