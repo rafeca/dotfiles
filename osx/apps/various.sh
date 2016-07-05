@@ -37,3 +37,8 @@ brew cask install steam
 ###########
 
 brew cask install firefox
+
+# Flux
+###########
+
+brew cask install flux
