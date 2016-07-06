@@ -10,6 +10,8 @@ then
 
 fi
 
+brew analytics off
+
 # Update homebrew formaulaes
 brew update
 
