@@ -88,6 +88,9 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0.667
 # Disable opening folders in Finder tabs
 defaults write com.apple.finder FinderSpawnTab -bool false
 
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -97,8 +100,9 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Avoid creating .DS_Store files on network volumes
+# Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -163,7 +167,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
 
 # Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
@@ -318,6 +322,13 @@ defaults write com.apple.iTunes disablePing -bool true
 ##################
 
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+##################
+# Photos.app
+##################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ##################
 # Folders
