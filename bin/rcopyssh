@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function usage {
+  echo "Usage: `basename $0` from to [sshoptions]"
+  echo
+  echo "  from       should be the origin folder that you want to copy"
+  echo "  to         should be the destination folder where you want to copy"
+  echo "  sshoptions any ssh options you want to pass to the ssh client"
+}
+
+# Check arguments
+if [ $# -lt 2 ]; then
+  usage
+  exit 1
+fi
+
+# It's important to add the / at the end of the path of from, so rsync works correctly
+from=${1%/}/
+to=${2%/}
+options="$3"
+
+if [ ! -d "$from" ]; then
+  echo "The specified origin folder does not exist!"
+  exit 1
+fi
+
+echo "Executing:"
+echo "rsync -av -i -e \"ssh$options\" --exclude=.DS_Store --delete \"$from\" \"$to\""
+
+rsync -av -i -e "ssh $options" --exclude=.DS_Store --delete "$from" "$to"

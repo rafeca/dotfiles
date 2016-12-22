@@ -22,10 +22,9 @@ if [ ! -d "$from" ]; then
   exit 1
 fi
 
-# Create the destination folder if it does not exist
-mkdir -p $to
-if [ $? -ne 0 ] ; then
-  echo "Could not create the destination folder. Please check if you have write permissions"
+# Check if the destination folder exists
+if [ ! -d "$to" ]; then
+  echo "The destination folder does not exist"
   exit 1
 fi
 

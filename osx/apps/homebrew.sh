@@ -25,3 +25,6 @@ brew install brew-cask
 
 # Install a newer version of html tidy (for SublimeLinter package)
 brew install tidy-html5
+
+# Install a new version of rsync
+brew install homebrew/dupes/rsync
