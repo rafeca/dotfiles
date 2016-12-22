@@ -5,9 +5,6 @@ brew cask install sublime-text3
 # if it still does not exist, create bin folder
 mkdir -p ~/bin
 
-# Add subl CLI
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
 # Open the app so the config files get initialized
 open -g "$HOME/Applications/Sublime Text.app" && sleep 2 && osascript -e 'quit app "Sublime Text"'
 
