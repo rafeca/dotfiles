@@ -7,11 +7,14 @@ osx/apps/quicklookplugins.sh
 osx/apps/slack.sh
 osx/apps/slate.sh
 osx/apps/spotify.sh
+osx/apps/steam.sh
 osx/apps/sublimetext3.sh
+osx/apps/telegram.sh
 osx/apps/the-unarchiver.sh
 osx/apps/transmission.sh
 osx/apps/vagrant.sh
 osx/apps/videolan.sh
+osx/apps/whatsapp.sh
 osx/apps/cyberduck.sh
 
 # Restart the Dock as some apps may have modified it
