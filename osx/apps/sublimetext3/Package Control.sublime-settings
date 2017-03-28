@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -18,6 +19,7 @@
 		"Sass",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-flow",
 		"SublimeLinter-html-tidy",
 		"SublimeLinter-json"
 	]
