@@ -19,7 +19,7 @@ brew update
 brew install wget ssh-copy-id coreutils hub trash tmux reattach-to-user-namespace
 
 # Install homebrew cask
-brew tap phinze/homebrew-cask
+brew tap caskroom/homebrew-cask
 brew tap caskroom/versions
 brew install brew-cask
 
