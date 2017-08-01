@@ -1,11 +1,18 @@
 {
   "rules": {
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline",
+    }],
     "comma-style": [2, "last"],
     "computed-property-spacing": [2, "never"],
     "consistent-this": [2, "self"],
     "constructor-super": [2],
-    "func-names": [2],
+    "func-names": [2, "as-needed"],
     "func-style": [2, "declaration"],
     "indent": [2, 2, {"SwitchCase": 1}],
     "linebreak-style": [2, "unix"],
@@ -46,7 +53,11 @@
     "node": true,
     "browser": true
   },
-  "ecmaFeatures": {
-    "modules": true
-  }
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
 }
