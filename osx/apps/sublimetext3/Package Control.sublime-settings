@@ -6,13 +6,13 @@
 	"installed_packages":
 	[
 		"Babel",
-		"Base16 Color Schemes",
 		"DocBlockr",
 		"EditorConfig",
 		"GitGutter",
 		"Handlebars",
 		"LESS",
 		"LineEndings",
+		"MJML-syntax",
 		"Package Control",
 		"Pretty JSON",
 		"Protocol Buffer Syntax",
@@ -21,6 +21,7 @@
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-flow",
 		"SublimeLinter-html-tidy",
-		"SublimeLinter-json"
+		"SublimeLinter-json",
+		"TypeScript"
 	]
 }
