@@ -23,7 +23,7 @@ Then install homebrew:
 
 The last step is to install and configure several apps/utilities:
 
-    $ osx/apps/all.sh
+    $ osx/apps.sh
 
 ## Manual OSX configuration
 
