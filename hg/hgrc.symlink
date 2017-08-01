@@ -6,3 +6,8 @@ color =
 [aliases]
 ninja = !$HG addremove . && $HG amend "$@" --rebase
 showstat = diff -r $1^1..$1 --stat
+
+[remotefilelog]
+backgroundrepack = True
+cachelimit = 20 GB
+cachepath = $HOME/.hgcache
