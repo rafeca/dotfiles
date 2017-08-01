@@ -28,4 +28,4 @@ if [ ! -d "$to" ]; then
   exit 1
 fi
 
-rsync -av -i --exclude=.DS_Store --delete "$from" "$to"
+rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --delete "$from" "$to"

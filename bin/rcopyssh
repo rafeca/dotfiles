@@ -27,4 +27,4 @@ fi
 echo "Executing:"
 echo "rsync -av -i -e \"ssh$options\" --exclude=.DS_Store --delete \"$from\" \"$to\""
 
-rsync -av -i -e "ssh $options" --exclude=.DS_Store --delete "$from" "$to"
+rsync -av -i --human-readable --info=progress2 -e "ssh $options" --exclude=.DS_Store --delete "$from" "$to"
