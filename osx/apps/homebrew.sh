@@ -25,9 +25,5 @@ brew tap caskroom/versions
 # Install a newer version of html tidy (for SublimeLinter package)
 brew install tidy-html5
 
-# Install OSX Fuse + sshfs
-brew cask install osxfuse
-brew install homebrew/fuse/sshfs
-
 # Install a new version of rsync
 brew install homebrew/dupes/rsync

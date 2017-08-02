@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install steam
+read -p "Install Steam (y/n)? " answer
+case $answer in
+  [Yy]*) brew cask install steam;;
+esac
