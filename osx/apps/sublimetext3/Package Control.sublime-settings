@@ -1,8 +1,5 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
 	"installed_packages":
 	[
 		"Babel",
@@ -11,7 +8,6 @@
 		"GitGutter",
 		"Handlebars",
 		"LESS",
-		"LineEndings",
 		"MJML-syntax",
 		"Package Control",
 		"Pretty JSON",

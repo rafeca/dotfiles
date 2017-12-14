@@ -17,7 +17,7 @@ ln -s "$(pwd)/$(dirname $0)/sublimetext3/Preferences.sublime-settings" "$HOME/Li
 ln -s "$(pwd)/$(dirname $0)/sublimetext3/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
 
 # Install base16 theme
-cd "$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/"
+cd "$HOME/Library/Application Support/Sublime Text 3/Packages/"
 git clone git://github.com/chriskempson/base16-textmate.git Base16
 cd -
 
