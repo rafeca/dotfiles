@@ -16,7 +16,8 @@ brew analytics off
 brew update
 
 # Install some packages
-brew install wget ssh-copy-id coreutils hub trash tmux reattach-to-user-namespace watch
+brew install wget ssh-copy-id coreutils hub trash tmux reattach-to-user-namespace watch colordiff jq exiftool
+
 
 # Install homebrew cask
 brew tap caskroom/cask

@@ -20,7 +20,7 @@ nvm install 8
 nvm alias default 8
 
 # Install some global modules
-npm install -g node-static node-inspector prettyjson grunt-cli gulp eslint yarn
+npm install -g node-static prettyjson grunt-cli gulp eslint yarn
 
 if [ "Not authed.  Run 'npm adduser'" = "$(npm whoami)" ]
 then
