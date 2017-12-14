@@ -353,6 +353,12 @@ ln -s "$HOME/Documents/Pictures/Photo Booth Library" "$HOME/Pictures/Photo Booth
 # Tell the system that the Photo Booth is a bundle
 xattr -wx com.apple.FinderInfo "00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $HOME/Documents/Pictures/Photo Booth Library
 
+# Add Quartz filters to reduce the quality of PDF images
+mkdir -p "$HOME/Library/Filters"
+ln "$(pwd)/$(dirname $0)/config/Reduce to 150 dpi.qfilter" "$HOME/Library/Filters"
+ln "$(pwd)/$(dirname $0)/config/Reduce to 75 dpi.qfilter" "$HOME/Library/Filters"
+
+
 ####################
 # Kill processes
 ####################
