@@ -8,10 +8,6 @@ brew cask install skype
 defaults write com.skype.skype UserDefinedEvents '{ MessageReceived = { Display = 0; PlaySound = 0; }; }'
 defaults write com.skype.skype UserDefinedEvents '{ FirstMessageReceived = { Display = 0; PlaySound = 0; }; }'
 
-# Telegram
-##########
-brew cask install telegram
-
 # Minecraft
 ###########
 
@@ -21,17 +17,6 @@ mkdir -p "$HOME/Documents/random/minecraft/saves"
 mkdir -p "$HOME/Library/Application Support/minecraft"
 
 ln -s "$HOME/Documents/random/minecraft/saves" "$HOME/Library/Application Support/minecraft/saves"
-
-# Wacom tablet drivers
-###########
-
-brew cask install wacom-bamboo-tablet
-
-# Steam app
-###########
-
-brew cask install steam
-
 
 # Firefox
 ###########
