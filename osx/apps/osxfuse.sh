@@ -2,4 +2,4 @@
 
 # Install OSX Fuse + sshfs
 brew cask install osxfuse
-brew install homebrew/fuse/sshfs
+brew install sshfs

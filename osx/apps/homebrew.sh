@@ -27,4 +27,4 @@ brew tap caskroom/versions
 brew install tidy-html5
 
 # Install a new version of rsync
-brew install homebrew/dupes/rsync
+brew install rsync
