@@ -1,5 +1,8 @@
 {
 	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Babel",
@@ -14,10 +17,10 @@
 		"Protocol Buffer Syntax",
 		"Sass",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-flow",
 		"SublimeLinter-html-tidy",
 		"SublimeLinter-json",
-		"TypeScript"
+		"TypeScript",
+		"SublimeLinter-eslint"
 	]
 }
