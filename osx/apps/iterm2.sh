@@ -2,11 +2,13 @@
 
 brew cask install iterm2
 
+# Open the app so the preference files get initialized
+open -g "/Applications/iTerm.app" && sleep 2
+
 # Disable warning when quitting
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# Open the app so the preference files get initialized
-open -g "/Applications/iTerm.app" && sleep 2 && osascript -e 'quit app "iTerm"'
+sleep 2 && osascript -e 'quit app "iTerm"'
 
 # Show tab bar in FullScreen
 defaults write com.googlecode.iterm2 ShowFullScreenTabBar -bool true

@@ -10,6 +10,7 @@
 		"EditorConfig",
 		"GitGutter",
 		"Handlebars",
+		"JsPrettier",
 		"LESS",
 		"MJML-syntax",
 		"Package Control",
@@ -17,10 +18,10 @@
 		"Protocol Buffer Syntax",
 		"Sass",
 		"SublimeLinter",
+		"SublimeLinter-eslint",
 		"SublimeLinter-flow",
 		"SublimeLinter-html-tidy",
 		"SublimeLinter-json",
-		"TypeScript",
-		"SublimeLinter-eslint"
+		"TypeScript"
 	]
 }
