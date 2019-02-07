@@ -347,7 +347,7 @@ sudo rm -fr ~/Public
 mkdir -p "$HOME/Documents/Pictures/Photo Booth Library"
 
 # Tell the system that the Photo Booth is a bundle
-xattr -wx com.apple.FinderInfo "00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $HOME/Documents/Pictures/Photo Booth Library
+xattr -wx com.apple.FinderInfo "00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" "$HOME/Documents/Pictures/Photo Booth Library"
 
 # Add Quartz filters to reduce the quality of PDF images
 mkdir -p "$HOME/Library/Filters"
