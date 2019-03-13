@@ -5,8 +5,12 @@ if [ ! -s ~/.rvm/scripts/rvm ]
 then
   echo "Installing RVM..."
 
+  # Install keys
+  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+  curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+
   # Install rvm
-  curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ignore-dotfiles
+  curl -sSL https://get.rvm.io | bash -s stable --autolibs=enabled --ignore-dotfiles
 
   # rubygems config
   echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
@@ -21,9 +25,9 @@ then
   source ~/.zshrc
 fi
 
-# Install last patchlevel of Ruby 2.0.0
-rvm install ruby-2.1
-rvm use --default ruby-2.1
+# Install last patchlevel of Ruby 2.3
+rvm install ruby-2.3
+rvm use --default ruby-2.3
 
 # Install "global" gems
 gem install terminal-notifier
