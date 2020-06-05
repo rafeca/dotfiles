@@ -6,8 +6,7 @@ then
   echo "Installing Homebrew..."
 
   # Install homebrew
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 brew analytics off
@@ -18,10 +17,6 @@ brew update
 # Install some packages
 brew install wget ssh-copy-id coreutils hub trash tmux reattach-to-user-namespace watch colordiff jq exiftool gpg
 
-
-# Install homebrew cask
-brew tap caskroom/cask
-brew tap caskroom/versions
 
 # Install a newer version of html tidy (for SublimeLinter package)
 brew install tidy-html5
