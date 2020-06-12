@@ -9,17 +9,24 @@ function usage {
 }
 
 # Check that the arguments are valid
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
   usage
   exit 1
 fi
+
+args_array=( "$@" )
+args_len=${#args_array[@]}
+
+from=${args_array[$args_len-2]}
+to=${args_array[$args_len-1]}
+rsync_args=${args_array[@]:1:$args_len-2}
 
 # Use the current date as the backup folder (like Time Machine)
 date=`date -u "+%Y-%m-%d-%H%M%S"`
 
 # It's important to add a trailing slash at the end of the from path, so rsync works correctly
-from=${1%/}/
-to=${2%/}
+from=${from%/}/
+to=${to%/}
 
 # Check if the from folder exists
 if [ ! -d "$from" ]; then
@@ -37,9 +44,11 @@ fi
 # Do the actual backup
 if [ ! -L "$to/Latest" ]; then
   echo "First Backup!"
-  rsync -aP --human-readable --info=progress2 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules "$from" "$to/$date"
+  rsync -aP --human-readable --info=progress2 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules "$rsync_args" "$from" "$to/$date"
+  exit 1
 else
-  rsync -aP --human-readable --info=progress3 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules --link-dest="$to/Latest" "$from" "$to/$date"
+  rsync -aP --human-readable --info=progress3 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules "$rsync_args" --link-dest="$to/Latest" "$from" "$to/$date"
+  exit 1
 fi
 
 # Remove the backup folder and exit if there is an rsync error or if the user presses Ctrl+C
@@ -53,4 +62,4 @@ fi
 rm "$to/Latest"
 ln -sf "$to/$date" "$to/Latest"
 
-echo "Backup created in $to/Latest"
+echo "Backup created in \"$to/Latest\""

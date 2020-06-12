@@ -1,24 +1,31 @@
 #!/bin/bash
 
 function usage {
-  echo "Usage: `basename $0` from to"
+  echo "Usage: `basename $0` [ssh arguments] from to"
   echo
   echo "  from      should be the origin folder that you want to copy"
   echo "  to        should be the destination folder where you want to copy"
 }
 
 # Check arguments
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
   usage
   exit 1
 fi
 
+args_array=( "$@" )
+args_len=${#args_array[@]}
+
+from=${args_array[$args_len-2]}
+to=${args_array[$args_len-1]}
+rsync_args=${args_array[@]:1:$args_len-2}
+
 # It's important to add the / at the end of the path of from, so rsync works correctly
-from=${1%/}/
-to=${2%/}
+from=${from%/}/
+to=${to%/}
 
 if [ ! -d "$from" ]; then
-  echo "The specified origin folder does not exist!"
+  echo "The specified origin folder does not exist!" $from
   exit 1
 fi
 
@@ -28,4 +35,4 @@ if [ ! -d "$to" ]; then
   exit 1
 fi
 
-rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --delete "$from" "$to"
+rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --hard-links --delete "$rsync_args""$from" "$to"
