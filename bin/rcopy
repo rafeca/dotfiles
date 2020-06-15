@@ -18,21 +18,20 @@ args_len=${#args_array[@]}
 
 from=${args_array[$args_len-2]}
 to=${args_array[$args_len-1]}
-rsync_args=${args_array[@]:1:$args_len-2}
+rsync_args=${args_array[@]:0:$args_len-2}
 
 # It's important to add the / at the end of the path of from, so rsync works correctly
 from=${from%/}/
 to=${to%/}
 
-if [ ! -d "$from" ]; then
-  echo "The specified origin folder does not exist!" $from
-  exit 1
-fi
+# if [ ! -d "$from" ]; then
+#   echo "The specified origin folder does not exist!" $from
+#   exit 1
+# fi
 
-# Check if the destination folder exists
-if [ ! -d "$to" ]; then
-  echo "The destination folder does not exist"
-  exit 1
-fi
+# if [ ! -d "$to" ]; then
+#   echo "The destination folder does not exist"
+#   exit 1
+# fi
 
-rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --hard-links --delete "$rsync_args""$from" "$to"
+rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --hard-links --delete "$rsync_args" "$from" "$to"

@@ -19,7 +19,7 @@ args_len=${#args_array[@]}
 
 from=${args_array[$args_len-2]}
 to=${args_array[$args_len-1]}
-rsync_args=${args_array[@]:1:$args_len-2}
+rsync_args=${args_array[@]:0:$args_len-2}
 
 # Use the current date as the backup folder (like Time Machine)
 date=`date -u "+%Y-%m-%d-%H%M%S"`
