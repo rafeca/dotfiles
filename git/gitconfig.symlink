@@ -36,9 +36,6 @@
 [rerere]
     enabled = 1
 
-[remote "origin"]
-    fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
-
 [commit]
 	gpgsign = true
 
