@@ -26,7 +26,7 @@
 
 [alias]
     lg = log --graph --abbrev-commit --date=relative --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%an%Creset %Cgreen(%ad)%Creset'
-
+    lgb = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cblue%an%Creset %Cgreen(%ad)%Creset'
 [pull]
     rebase = true
 
