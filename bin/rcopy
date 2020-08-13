@@ -18,7 +18,11 @@ args_len=${#args_array[@]}
 
 from=${args_array[$args_len-2]}
 to=${args_array[$args_len-1]}
-rsync_args=${args_array[@]:0:$args_len-2}
+if [ $args_len -gt 2 ]; then
+  rsync_args=${args_array[@]:0:$args_len-2}
+else
+  rsync_args=
+fi
 
 # It's important to add the / at the end of the path of from, so rsync works correctly
 from=${from%/}/
