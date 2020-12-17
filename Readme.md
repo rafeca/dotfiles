@@ -47,7 +47,7 @@ the select box to: "Connecting this device opens: No Application"
 
 Once Adobe Photoshop has been manually installed, execute:
 
-    $ osx/apps/photohop.sh
+    $ osx/apps/photoshop.sh
 
 Then, enable the custom profile. Go to `Window → Workspace` and select the `rafeca workspace`.
 
