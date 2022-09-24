@@ -4,7 +4,7 @@
 brew install git
 
 # Install gpg-suite to be able to store gpg keys passphrases into OSX Keychain
-brew cask install gpg-suite
+brew install --cask gpg-suite
 
 # Get full name of the OSX user (cheers @juandebravo!)
 username=`whoami`

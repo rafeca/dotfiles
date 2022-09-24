@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew cask install discord
+brew install --cask discord

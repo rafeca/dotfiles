@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install minecraft
+brew install --cask minecraft
 
 mkdir -p "$HOME/Documents/random/minecraft/saves"
 mkdir -p "$HOME/Library/Application Support/minecraft"

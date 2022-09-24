@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew cask install virtualbox && brew cask install vagrant
+brew install --cask virtualbox && brew install --cask vagrant

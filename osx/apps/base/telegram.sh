@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew cask install telegram
+brew install --cask telegram-desktop

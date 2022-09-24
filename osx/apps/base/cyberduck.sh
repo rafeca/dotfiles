@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install cyberduck
+brew install --cask cyberduck
 
 # Do not show transfers window when uploading a file
 defaults write ch.sudo.cyberduck.plist "queue.upload.action" -string "overwrite"

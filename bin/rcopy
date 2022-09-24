@@ -13,15 +13,17 @@ if [ $# -lt 2 ]; then
   exit 1
 fi
 
+rsync_args=("-av" "-i" "--human-readable" "--info=progress2" "--exclude=.DS_Store" "--hard-links" "--delete")
+
 args_array=( "$@" )
 args_len=${#args_array[@]}
 
 from=${args_array[$args_len-2]}
 to=${args_array[$args_len-1]}
+
+# If rcopy gets passed more args, they should be sent to rsync.
 if [ $args_len -gt 2 ]; then
-  rsync_args=${args_array[@]:0:$args_len-2}
-else
-  rsync_args=
+  rsync_args+=("${args_array[@]:0:$args_len-2}")
 fi
 
 # It's important to add the / at the end of the path of from, so rsync works correctly
@@ -38,4 +40,4 @@ to=${to%/}
 #   exit 1
 # fi
 
-rsync -av -i --human-readable --info=progress2 --exclude=.DS_Store --hard-links --delete "$rsync_args" "$from" "$to"
+rsync "${rsync_args[@]}" "$from" "$to"

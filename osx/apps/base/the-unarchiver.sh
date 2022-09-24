@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew cask install the-unarchiver
+brew install --cask the-unarchiver

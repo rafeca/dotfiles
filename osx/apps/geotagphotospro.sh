@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew cask install geotag-photos-pro && brew cask install GeoTag
+brew install --cask geotag-photos-pro && brew install --cask GeoTag

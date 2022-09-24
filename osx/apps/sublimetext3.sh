@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install sublime-text
+brew install --cask sublime-text
 
 # if it still does not exist, create bin folder
 mkdir -p ~/bin

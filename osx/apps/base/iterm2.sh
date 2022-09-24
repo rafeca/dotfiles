@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew cask install iterm2
+brew install --cask iterm2
 
 # Open the app so the preference files get initialized
 open -g "/Applications/iTerm.app" && sleep 2

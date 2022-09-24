@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-brew cask install ocrmypdf
-brew cask install tesseract-lang
+brew install ocrmypdf
+brew install tesseract-lang

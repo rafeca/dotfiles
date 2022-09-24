@@ -8,21 +8,44 @@ function usage {
   echo "            backup. It's usually on an external hard drive."
 }
 
+function is_remote {
+  remote_regexp="^.+@.+:"
+
+  if [[ $1 =~ $remote_regexp ]]; then 
+    # The return value needs to be the opposite
+    return 0
+  else
+    return 1
+  fi
+}
+
+function get_remote_path {
+  remote_regexp="^.+@.+:(.+)"
+
+  if [[ $1 =~ $remote_regexp ]]; then 
+    echo ${BASH_REMATCH[1]}
+  else
+    return 1
+  fi
+}
+
 # Check that the arguments are valid
 if [ $# -lt 2 ]; then
   usage
   exit 1
 fi
 
+rsync_args=("-aP" "--stats" "--human-readable" "--info=progress3" "--log-file=\"$to.log\"" "--exclude=.DS_Store" "--exclude=.gems" "--exclude=node_modules" )
+
 args_array=( "$@" )
 args_len=${#args_array[@]}
 
 from=${args_array[$args_len-2]}
 to=${args_array[$args_len-1]}
+
+# If rbackup gets passed more args, they should be sent to rsync.
 if [ $args_len -gt 2 ]; then
-  rsync_args=${args_array[@]:0:$args_len-2}
-else
-  rsync_args=
+  rsync_args+=("${args_array[@]:0:$args_len-2}")
 fi
 
 # Use the current date as the backup folder (like Time Machine)
@@ -38,6 +61,11 @@ if [ ! -d "$from" ]; then
   exit 1
 fi
 
+if is_remote "$to"; then
+  echo "This command does not accept remote directories, please use rcopy instead."
+  exit 1
+fi
+
 # Create the destination folder if it does not exist
 mkdir -p "$to"
 if [ $? -ne 0 ] ; then
@@ -46,12 +74,13 @@ if [ $? -ne 0 ] ; then
 fi
 
 # Do the actual backup
-if [ ! -L "$to/Latest" ]; then
-  echo "First Backup!"
-  rsync -aP --stats --human-readable --info=progress2 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules "$rsync_args" "$from" "$to/$date"
+if [ -L "$to/Latest" ]; then
+  rsync_args+=("--link-dest=\"$to/Latest\"")
 else
-  rsync -aP --stats --human-readable --info=progress3 --log-file="$to.log" --exclude=.DS_Store --exclude=.gems --exclude=node_modules "$rsync_args" --link-dest="$to/Latest" "$from" "$to/$date"
+  echo "First Backup!"
 fi
+
+rsync "${rsync_args[@]}" "$from" "$to/$date"
 
 # Remove the backup folder and exit if there is an rsync error or if the user presses Ctrl+C
 if [ $? -ne 0 ] ; then
